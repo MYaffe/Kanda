@@ -8,7 +8,13 @@ def show
 	@problem = Problem.find(params[:id])
 	@solution = Solution.new
   	@solutions = @problem.solutions
-  	gon.solutions = Problem.first.body
+  	gon.solutions = Solution.all.map do |solution|
+  		solution.body  
+  	end
+  		gon.category = Solution.all.map do |solution|
+  		solution.category
+  	end
+  
 end
 
 def new

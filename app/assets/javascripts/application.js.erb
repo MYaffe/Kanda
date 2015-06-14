@@ -14,8 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
 $(document).ready(function(){
-	$('.panel').click(function(){
-	 $('.c1').append(gon.solutions)
+	$('.panel').one("click", function(){
+ var isEmpty = document.getElementsByClassName('c1').outerHTML === "";
+ if (isEmpty = true){
+
+		for (i = 0; i < gon.category.length; i++) {
+			if (gon.category[i] == 'song'){
+				$('.c1').append(gon.solutions[i] + "<br> <br>")
+				};
+			};
+		};
 	});
 });
+
+
