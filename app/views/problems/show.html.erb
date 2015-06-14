@@ -1,0 +1,13 @@
+<h1><%= @problem.title %></h1>
+<p><%= @problem.body %></p>
+<div class="panel">
+</div>
+<div class="c1">
+</div>
+<%=render partial: 'problems/solution', collection: @problem.solutions %>
+<%= render partial: 'solutions/form' %>
+
+<%= link_to "delete", problem_path(@problem), method: :delete, data: {confirm: "Really delete the article?"} 
+%>
+<%= link_to "Back to Home", problems_path %>
+<%= link_to "Edit", edit_problem_path(@problem)%>

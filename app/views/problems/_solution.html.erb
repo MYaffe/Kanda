@@ -1,0 +1,27 @@
+<div class="noshow">
+<div class="<%=solution.category %>">
+
+<ul>
+  <% if solution.category == "song" %>
+<li>
+	<h3> Try listening to this </h3>
+</li>
+
+  <% elsif solution.category =="talk" %>
+  <li>
+
+  <h3> Here's what you should say </h3>
+  </li>
+
+  <% end %>
+
+  </ul>
+
+
+  </div>
+
+  <div>
+  <h4>Solution Suggested By <%= solution.author %></h4>
+  <p class="solution"><%= solution.body %></p>
+</div>
+</div>
