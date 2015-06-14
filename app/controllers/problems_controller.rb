@@ -8,6 +8,7 @@ def show
 	@problem = Problem.find(params[:id])
 	@solution = Solution.new
   	@solutions = @problem.solutions
+  	gon.solutions = Problem.first.body
 end
 
 def new

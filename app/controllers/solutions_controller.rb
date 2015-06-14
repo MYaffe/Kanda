@@ -11,6 +11,6 @@ end
 
 def solution_params
 	params.require(:solution).permit(:author, :body, :category)
-end
+end 
 
 end
