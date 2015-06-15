@@ -1,11 +1,19 @@
-<h1>All Problems</h1>
+<div class="background">
 
+<div class="index">
+
+<%= link_to "What's Going On?", new_problem_path%>
+
+<h1> Problems Submitted </h1>
+
+</div>
 <ul id="problems">
   <% @problems.each do |problem| %>
     <li>
 <%= link_to problem.title, problem_path(problem)%>
     </li>
+    <br><br><br>
   <% end %>
 </ul>
+</div>
 
-<%= link_to "What's Going On?", new_problem_path%>
