@@ -18,7 +18,9 @@ def show
     gon.author = Solution.all.map do |solution|
       solution.author
     end
-  
+
+    
+
 end
 
 def new
