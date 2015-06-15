@@ -14,16 +14,58 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
 $(document).ready(function(){
-	$('.panel').one("click", function(){
- var isEmpty = document.getElementsByClassName('c1').outerHTML === "";
- if (isEmpty = true){
+
+var nbOptions = 8;
+var angleStart = -360;
+
+// jquery rotate animation
+function rotate(li,d) {
+    $({d:angleStart}).animate({d:d}, {
+        step: function(now) {
+            $(li)
+               .css({ transform: 'rotate('+now+'deg)' })
+               .find('label')
+                  .css({ transform: 'rotate('+(-now)+'deg)' });
+        }, duration: 0
+    });
+}
+
+// show / hide the options
+function toggleOptions(s) {
+    $(s).toggleClass('open');
+    var li = $(s).find('li');
+    var deg = $(s).hasClass('half') ? 180/(li.length-1) : 360/li.length;
+    for(var i=0; i<li.length; i++) {
+        var d = $(s).hasClass('half') ? (i*deg)-90 : i*deg;
+        $(s).hasClass('open') ? rotate(li[i],d) : rotate(li[i],angleStart);
+    }
+}
+
+$('.selector button').click(function(e) {
+    toggleOptions($(this).parent());
+});
+
+setTimeout(function() { toggleOptions('.selector'); }, 100);
+
+
+
+
+	$('#c1').one("click", function(){
 
 		for (i = 0; i < gon.category.length; i++) {
 			if (gon.category[i] == 'song'){
-				$('.c1').append(gon.solutions[i] + "<br> <br>")
-				};
+				$('.yellow').append(gon.author[i] + "<br>" + gon.solutions[i] + "<br> <br>")
+			};
+		};
+	});
+
+$('#c2').one("click", function(){
+	$("#yellow").html("")
+		for (i = 0; i < gon.category.length; i++) {
+			if (gon.category[i] == 'talk'){
+				$('.yellow').append(gon.author[i] + "<br>" + gon.solutions[i] + "<br> <br>")
+				
 			};
 		};
 	});

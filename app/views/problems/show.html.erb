@@ -1,9 +1,34 @@
-<h1><%= @problem.title %></h1>
-<p><%= @problem.body %></p>
-<div class="panel">
+<h2>Plug In To Your Headphones?</h2>
+
+<div class="yellow" id='yellow'>
+	
 </div>
-<div class="c1">
+
+<div class="selector">
+  <ul>
+    <li>
+      <input id="c1" type="checkbox"/>
+      <label for="c1">Option 1</label>
+    </li>
+    <li>
+      <input id="c2" type="checkbox"/>
+      <label for="c2">Option 2</label>
+    </li>
+    <li>
+      <input id="c3" type="checkbox"/>
+      <label for="c3">Option 3</label>
+    </li>
+    <li>
+    <input id="c4" type="checkbox"/>
+      <label for="c4">Option 4</label>
+      </li>
+    
+  </ul>
+  <button><p><%= @problem.body %></p>
+</button>
 </div>
+
+
 
 <%=render partial: 'problems/solution', collection: @problem.solutions %>
 <%= render partial: 'solutions/form' %>

@@ -13,17 +13,20 @@
 	display:none;
 }
 
-.panel{
+/*.panel{
 	float:right;
 	height:20px;
 	width:200px;
 	background-color:blue;
+}*/
+
+.yellow {
+	height: 850px;
+	width: 350px;
+	background-color: beige;
+	float:right;
+	overflow:scroll;
 }
 
-.c1 {
-	float:right;
-	height: 300px;
-	width:250px;
-	background-color:yellow;
-}
+
 

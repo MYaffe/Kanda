@@ -14,6 +14,10 @@ def show
   		gon.category = Solution.all.map do |solution|
   		solution.category
   	end
+
+    gon.author = Solution.all.map do |solution|
+      solution.author
+    end
   
 end
 
