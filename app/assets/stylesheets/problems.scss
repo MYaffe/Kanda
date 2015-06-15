@@ -21,10 +21,14 @@
 }*/
 
 .yellow {
-	height: 850px;
-	width: 350px;
+	 position:absolute;
+    width:500px;
+    height:315px;
+    bottom:0px;
+    right:25%;
+    left:50%;
+    margin-left:-250px;
 	background-color: beige;
-	float:right;
 	overflow:scroll;
 }
 
