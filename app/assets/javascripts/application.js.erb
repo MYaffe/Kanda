@@ -51,24 +51,35 @@ setTimeout(function() { toggleOptions('.selector'); }, 100);
 
 
 
-	$('#c1').one("click", function(){
-
-		for (i = 0; i < gon.category.length; i++) {
+	$('#c2').one("click", function(){
+                $("#yellow").html("")
+        for (i = 0; i < gon.category.length; i++) {
 			if (gon.category[i] == 'song'){
-				$('.yellow').append(gon.author[i] + "<br>" + gon.solutions[i] + "<br> <br>")
+				$('.yellow').append(gon.solutions[i] + "<br>" + gon.author[i] + "<br> <br>")
 			};
 		};
 	});
 
-$('#c2').one("click", function(){
+$('#c1').one("click", function(){
 	$("#yellow").html("")
 		for (i = 0; i < gon.category.length; i++) {
 			if (gon.category[i] == 'talk'){
-				$('.yellow').append(gon.author[i] + "<br>" + gon.solutions[i] + "<br> <br>")
+				$('.yellow').append(gon.solutions[i] + "<br>" + gon.author[i] + "<br> <br>")
 				
 			};
 		};
 	});
+
+
+$('#c4').one("click", function(){
+    $("#yellow").html("")
+        for (i = 0; i < gon.category.length; i++) {
+            if (gon.category[i] == 'do'){
+                $('.yellow').append(gon.solutions[i] + "<br>" + gon.author[i] + "<br> <br>")
+                
+            };
+        };
+    });
 });
 
 
